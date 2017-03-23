@@ -1,1 +1,13 @@
+.social-btn  {
+  padding: 5px 10px 5px 10px;
+  border-radius: 5%;
+  border-color: gray;
+  background-color: navy;
+  text-decoration: none;
+  color: white;
+}
 
+.social-btn:hover {
+  background-color: lightgray;
+  color: navy;
+}
