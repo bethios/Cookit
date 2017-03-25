@@ -6,6 +6,12 @@ require 'random_data'
       body:   RandomData.random_paragraph
   )
 end
+
+Post.find_or_create_by!(
+        title: "Unique Title",
+        body: "Unique body, oh look how unique and magical I am, like a unicorn"
+)
+
 posts = Post.all
 
 100.times do
