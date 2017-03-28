@@ -1,4 +1,4 @@
-class AdvertisementController < ApplicationController
+class AdvertisementsController < ApplicationController
   def index
     @advertisement = Advertisement.all
   end
@@ -20,7 +20,7 @@ class AdvertisementController < ApplicationController
       flash[:notice] = "Advertisement was saved."
       redirect_to @advertisement
     else
-      flash.now[:alert] = "There was an error saving the advertisement. Please try again."
+      flash.now[:alert] = "There was an error saving the advertisements. Please try again."
       render :new
     end
   end

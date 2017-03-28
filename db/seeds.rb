@@ -29,7 +29,7 @@ end
   )
 end
 
-advertisement = Advertisement.all
+advertisements = Advertisement.all
 
 puts "Seed finished"
 puts "#{Post.count} posts created"
