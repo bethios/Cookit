@@ -1,0 +1,31 @@
+<h1>Place New Ad</h1>
+
+<div class="row">
+  <div class="col-md-4">
+    <p>Guidelines for ads</p>
+    <ul>
+      <li>Puns are encouraged.</li>
+      <li>All ads much be in iambic pentameter.</li>
+      <li>Avoid words with more than 2 vowels.</li>
+    </ul>
+  </div>
+  <div class="col-md-8">
+    <%= form_for @advertisement do |f| %>
+        <div class="form-group">
+          <%= f.label :title %>
+          <%= f.text_field :title, class: 'form-control', placeholder: "Enter ad title" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :body %>
+          <%= f.text_area :body, rows: 2, class: 'form-control', placeholder: "Enter ad body" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :price %>
+          <%= f.text_field :price, class: 'form-control', placeholder: "Enter bid price" %>
+        </div>
+        <div class="form-group">
+          <%= f.submit "Save", class: 'btn btn-success' %>
+        </div>
+    <% end %>
+  </div>
+</div>
