@@ -65,4 +65,17 @@ RSpec.describe PostsController, type: :controller do
       expect(response).to redirect_to Post.last
     end
   end
+
+  describe "GET spam" do
+    it "index 0 title marked SPAM" do
+      expect{ Post.first.title == "SPAM"}
+    end
+    it "index 5 title marked SPAM" do
+      expect{ Post[5].title == "SPAM"}
+    end
+    it "index 2 title not marked SPAM" do
+      expect{Post[2].title != "SPAM"}
+    end
+
+  end
 end
