@@ -4,7 +4,6 @@ RSpec.describe PostsController, type: :controller do
 
   let(:my_post) { Post.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph) }
 
-
   describe "GET #index" do
     it "returns http success" do
       get :index
@@ -86,11 +85,9 @@ RSpec.describe PostsController, type: :controller do
 
     it "renders the #edit view" do
       get :edit, {id: my_post.id}
-      # #1
       expect(response).to render_template :edit
     end
 
-    # #2
     it "assigns post to be updated to @post" do
       get :edit, {id: my_post.id}
 
