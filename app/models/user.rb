@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
     if self.name.present?
       nameArray = self.name.split()
       nameArray.each do |word|
-        word.capitalize!
+        word[0].capitalize!
       end
       self.name = nameArray.join(" ")
     end
