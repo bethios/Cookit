@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   get 'faq' => 'welcome#faq'
 
+  post 'users/confirm' => 'users#confirm'
+
   root 'welcome#index'
 
 end
