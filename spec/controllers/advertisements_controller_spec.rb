@@ -45,7 +45,7 @@ RSpec.describe AdvertisementsController, type: :controller do
       expect{post :create, advertisement: {title: RandomData.random_sentence, body: RandomData.random_paragraph}}.to change(Advertisement,:count).by(1)
     end
 
-    it "increases the number of Posts not to change" do
+    it "the number of Posts not to change" do
       expect{post :create, advertisement: {title: RandomData.random_sentence, body: RandomData.random_paragraph}}.to change(Post,:count).by(0)
     end
 
