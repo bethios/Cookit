@@ -14,7 +14,6 @@ RSpec.describe AdvertisementsController, type: :controller do
       get :index
       expect(assigns(:advertisement)).to eq([my_ad])
     end
-
   end
 
   describe "GET show" do
@@ -44,6 +43,10 @@ RSpec.describe AdvertisementsController, type: :controller do
   describe "AD create" do
     it "increases the number of Ads by 1" do
       expect{post :create, advertisement: {title: RandomData.random_sentence, body: RandomData.random_paragraph}}.to change(Advertisement,:count).by(1)
+    end
+
+    it "increases the number of Posts not to change" do
+      expect{post :create, advertisement: {title: RandomData.random_sentence, body: RandomData.random_paragraph}}.to change(Post,:count).by(0)
     end
 
     it "assigns the new post to @advertisement" do
