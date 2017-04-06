@@ -122,7 +122,7 @@ RSpec.describe QuestionsController, type: :controller do
 
     it "redirects to questions question" do
       delete :destroy, {id: my_question.id}
-      expect(response).to redirect_to posts_path
+      expect(response).to redirect_to questions_path
     end
   end
 end
