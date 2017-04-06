@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
   has_many :posts
 
   before_save { self.email = email.downcase if email.present? }
+  before_save { self.role ||= :member }
+
   before_save {
     if self.name.present?
       nameArray = self.name.split()
@@ -21,5 +23,7 @@ class User < ActiveRecord::Base
             length: { minimum: 3, maximum: 254 }
 
   has_secure_password
+
+  enum role: [:member, :admin]
 
 end
