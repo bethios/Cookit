@@ -70,11 +70,26 @@ end
 
 questions = Question.all
 
+user = User.first
+user.update_attributes!(
+    name: 'Beth Cummings',
+    email: 'youremail@your.com',
+    password: 'helloworld',
+    role: 'admin'
+)
+
 admin = User.create!(
     name:     'Admin User',
     email:    'admin@example.com',
     password: 'helloworld',
     role:     'admin'
+)
+
+moderator = User.create!(
+    name:     'Moderator User',
+    email:    'mod@example.com',
+    password: 'helloworld',
+    role:     'moderator'
 )
 
 member = User.create!(
