@@ -29,6 +29,12 @@ RSpec.describe Post, type: :model do
     end
   end
 
+  describe "automatic first vote" do
+    it "starts with 1 positive vote" do
+      expect(post.up_votes ).to eq(1)
+    end
+  end
+
   describe "voting" do
     before do
       3.times { post.votes.create!(value: 1) }
