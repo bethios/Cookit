@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+</head>
+<body>
+  <h1>We have set your post as a favorite for you, "<%= @post.title %>"</h1>
+  <p>When someone leaves a comment you'll be notified!</p>
+  <p>
+    <%= link_to "View your post on the site anytime", topic_post_url(@post.topic, @post) %>
+  </p>
+</body>
+</html>

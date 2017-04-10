@@ -138,4 +138,5 @@ RSpec.describe User, type: :model do
       expect(user.favorite_for(@post)).to eq(favorite)
     end
   end
+
 end

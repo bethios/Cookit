@@ -1,0 +1,5 @@
+We have set your post as a favorite for you, "<%= @post.title %>"
+<%= "=" * (@post.title.length + 12) %>
+When someone leaves a comment you'll be notified!
+
+Review your post anytime at: <%= topic_post_url(@post.topic, @post) %>
