@@ -13,6 +13,8 @@ RSpec.describe Post, type: :model do
 
   it { is_expected.to have_many(:comments) }
   it { is_expected.to have_many(:votes) }
+  it { is_expected.to have_many(:favorites) }
+
   it { is_expected.to belong_to(:topic) }
   it { is_expected.to belong_to(:user) }
   it { is_expected.to validate_presence_of(:title) }
@@ -35,7 +37,6 @@ RSpec.describe Post, type: :model do
     end
   end
 
-voting
   describe "voting" do
     before do
       3.times { post.votes.create!(value: 1) }
