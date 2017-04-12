@@ -20,10 +20,4 @@ RSpec.describe Topic, type: :model do
       expect(topic.public).to be(true)
     end
   end
-
-  describe "errors" do
-    it "flashes alert of error" do
-      expect(flash[:alert]).to be_present
-    end
-  end
 end
