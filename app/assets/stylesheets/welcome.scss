@@ -20,8 +20,16 @@
   background-image: image_url("computer2.jpg");
   background-size: cover;
   background-position: bottom;
-  height: 50vh;
-  padding: 15px;
+  height: 60vh;
+  padding: 20px;
+}
+
+#jumbotron p{
+  font-weight: 400;
+}
+
+#jumbotron h1{
+  font-weight: 600;
 }
 
 @media (min-width: 1000px) {
@@ -29,4 +37,3 @@
     max-width: 30vw;
   }
 }
-
