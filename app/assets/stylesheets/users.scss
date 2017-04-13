@@ -5,3 +5,27 @@
   margin-bottom: 5px;
   margin-right: 5px;
 }
+
+.wrapper{
+  display: grid;
+}
+
+.tile-grid{
+  grid-template-columns: repeat(3, 1fr);
+  display: inline;
+}
+
+.fave-avatar{
+  float: left;
+  display:inline;
+}
+
+.fave-tile {
+  border: solid 1px black;
+  margin: 5px;
+  grid-auto-rows: 70px;
+}
+
+.fave-info{
+  margin: 5px;
+}

@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe SponsoredPost, type: :model do
-  let(:sponsored_post) { SponsoredPost.create!(title: "New Post Title", body: "New Post Body") }
+  let(:my_topic) { create(:topic) }
+  let(:sponsored_post) { create(:post, my_topic)}
 
   let(:name) { RandomData.random_sentence }
   let(:description) { RandomData.random_paragraph }
