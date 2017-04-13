@@ -7,7 +7,26 @@
   color: white;
 }
 
+#booted{
+  margin-top: 0;
+}
+
 .social-btn:hover {
   background-color: lightgray;
   color: navy;
 }
+
+#jumbotron{
+  background-image: url("computer2.jpg");
+  background-size: cover;
+  background-position: bottom;
+  height: 50vh;
+  padding: 15px;
+}
+
+@media (min-width: 1000px) {
+  #jumbotron p {
+    max-width: 30vw;
+  }
+}
+
