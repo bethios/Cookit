@@ -9,14 +9,15 @@ group :production do
 end
 
 group :development do
-  gem 'sqlite3'
   gem 'pry-rails'
+  gem 'sqlite3'
 end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'shoulda'
   gem 'factory_girl_rails', '~> 4.0'
+  gem 'capybara'
 end
 
 # Use SCSS for stylesheets
