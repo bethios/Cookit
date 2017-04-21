@@ -64,20 +64,20 @@ RSpec.describe VotesController, type: :controller do
     end
 
     describe "POST down_vote" do
-      it "the users first vote increases number of post votes by one" do
+      it "the users first vote increases number of total post votes by one" do
         votes = user_post.votes.count
         post :down_vote, post_id: user_post.id
         expect(user_post.votes.count).to eq(votes + 1)
       end
 
-      it "the users second vote does not increase the number of votes" do
+      it "the users second vote does not change the number of votes" do
         post :down_vote, post_id: user_post.id
         votes = user_post.votes.count
         post :down_vote, post_id: user_post.id
         expect(user_post.votes.count).to eq(votes)
       end
 
-      it "decreases the sum of post votes by one" do
+      it "decreases the sum of all post votes by one" do
         points = user_post.points
         post :down_vote, post_id: user_post.id
         expect(user_post.points).to eq(points - 1)

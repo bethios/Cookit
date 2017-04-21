@@ -1,10 +1,9 @@
 <div class="row">
   <div class="col-md-4">
-    <p>Guidelines for topics:</p>
+    <p>Guidelines for dishes:</p>
     <ul>
-      <li>Make sure the topic is appropriate.</li>
-      <li>Never insult dogs.</li>
-      <li>Smile when you type.</li>
+      <li>Make sure the dish isn't a duplicate.</li>
+      <li>Keep grandma's name out of the Dish, save that for the recipes!</li>
     </ul>
   </div>
   <div class="col-md-8">
@@ -21,14 +20,14 @@
         <% end %>
         <%= form_group_tag(topic.errors[:name]) do %>
             <%= f.label :name %>
-            <%= f.text_field :name, class: 'form-control', placeholder: "Enter topic name" %>
+            <%= f.text_field :name, class: 'form-control', placeholder: "Enter dish name" %>
         <% end %>
         <%= form_group_tag(topic.errors[:description]) do %>
             <%= f.label :description %>
-            <%= f.text_area :description, rows: 8, class: 'form-control', placeholder: "Enter topic description" %>
+            <%= f.text_area :description, rows: 4, class: 'form-control', placeholder: "Enter dish description. What country is it from? What are the traditional ingredients? Techniques?" %>
             <div class="form-group">
               <%= f.label :public, class: 'checkbox' do %>
-                  <%= f.check_box :public %> Public topic
+                  <%= f.check_box :public %> Public dish
               <% end %>
             </div>
             <%= f.submit "Save", class: 'btn btn-success' %>
