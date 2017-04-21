@@ -17,11 +17,12 @@
 }
 
 #jumbotron{
-  background-image: image_url("computer2.jpg");
+  background-image: image_url("garlic.jpg");
   background-size: cover;
   background-position: bottom;
   height: 60vh;
   padding: 20px;
+  position: relative;
 }
 
 #jumbotron p{
@@ -32,8 +33,19 @@
   font-weight: 600;
 }
 
+.greeting {
+  background-color: rgba(245, 244, 247, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  height: 90%;
+  width: 97%;
+  padding-top: 10%;
+  border-radius: 1%;
+}
+
 @media (min-width: 1000px) {
-  #jumbotron p {
-    max-width: 30vw;
-  }
+
 }
