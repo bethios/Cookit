@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-8">
-    <p><%= @post.body %></p>
+    <p><%= markdown(@post.body) %></p>
     <div>
       <h3>Comments</h3>
       <%= render @post.comments %>
@@ -28,7 +28,6 @@
           <%= render partial: 'favorites/favorite_vote', locals: { post: @post } %>
       <% end %>
       <%= link_to "Return to Dish", [@post.topic], class: 'btn btn-default' %>
-
     </div>
   </div>
 </div>
