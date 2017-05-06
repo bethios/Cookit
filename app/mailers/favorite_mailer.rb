@@ -1,5 +1,7 @@
 class FavoriteMailer < ApplicationMailer
   default from: "bethios@gmail.com"
+  #config = YAML.load_file("config.yml")
+
 
   def new_comment(user, post, comment)
     headers["Message-ID"] = "<comments/#{comment.id}@your-app-name.example>"
